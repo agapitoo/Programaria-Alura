@@ -1,7 +1,6 @@
 GET http://localhost:3000/livros
 
 ####
-
 GET http://localhost:3000/livros/6659ffb882f1dd2845bd3020
 
 
@@ -14,7 +13,8 @@ Content-Type: application/json
 	"titulo": "o senhor dos aneis",
 	"editora": "clasico",
 	"paginas": 200,
-	"valor": 10
+	"valor": 10,
+	"autor": "66820eb234e9ccd9bb07be74"
 }
 
 ####
@@ -34,10 +34,11 @@ Content-Type: application/json
 
 #####
 
+GET http://localhost:3000/autores
 
 
 
-
+######
 
 POST http://localhost:3000/autores
 Content-Type: application/json
@@ -48,4 +49,17 @@ Content-Type: application/json
 }
 
 #####
-DELETE http://localhost:3000/autores/665a337084b1353a951fb975
+DELETE http://localhost:3000/autores/66820583b355a60d627e416a
+
+###
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+	"titulo": "O Similarillion",
+	"autor": "66820eb234e9ccd9bb07be74"
+}
+
+
+####
+GET http://localhost:3000/livros/busca?editora=clasico

@@ -1,9 +1,6 @@
-import { autor } from "../models/autores.js";
-
-
+import { autor } from "../models/Autor.js";
 
 //criação de metodos 
-
 
 class AutorController {
 
